@@ -6,6 +6,5 @@ modules = ["web:v2-20230623-0b7a606"]
 channel = "stable-23_11"
 
 [deployment]
-publicDir = "/"
+publicDir = "./"
 deploymentTarget = "static"
-run = ["sh", "-c", ""]
