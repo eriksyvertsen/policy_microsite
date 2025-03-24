@@ -10,6 +10,89 @@
 
     <!-- AngelList Logo -->
     <link rel="icon" href="angellist-logo.png" />
+
+    <!-- Additional inline styles -->
+    <style>
+      .hero-enhanced {
+        padding: var(--space-xl) var(--space-md);
+        background-color: var(--color-bg-accent);
+        margin-bottom: var(--space-lg);
+      }
+
+      .hero-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: var(--space-md);
+        font-weight: 700;
+      }
+
+      .hero-subtitle {
+        color: var(--color-primary);
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-bottom: var(--space-md);
+        line-height: 1.3;
+      }
+
+      .hero-intro {
+        font-size: 1.2rem;
+        margin-bottom: var(--space-sm);
+        color: var(--color-text-secondary);
+      }
+
+      .policy-points {
+        background-color: var(--color-bg-light);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: var(--space-md) var(--space-lg);
+        margin: var(--space-md) 0;
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .policy-point {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: var(--space-md);
+      }
+
+      .policy-point:last-child {
+        margin-bottom: 0;
+      }
+
+      .policy-icon {
+        color: var(--color-primary);
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: var(--space-sm);
+        flex-shrink: 0;
+      }
+
+      .policy-text {
+        font-size: 1.15rem;
+        line-height: 1.5;
+      }
+
+      .policy-text strong {
+        color: var(--color-primary);
+      }
+
+      .hero-goal {
+        font-style: italic;
+        max-width: 700px;
+        margin: var(--space-md) auto;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--color-text-secondary);
+      }
+    </style>
   </head>
 
   <body>
@@ -31,11 +114,33 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <h1>AngelList Policy Center</h1>
-        <p>Shaping the future of private markets through policy engagement on forward-thinking regulatory frameworks.</p>
+    <!-- Enhanced Hero Section -->
+    <section class="hero-enhanced">
+      <div class="hero-container">
+        <h1 class="hero-title">AngelList Policy Center</h1>
+        <h2 class="hero-subtitle">Modernize Finance Policy: Responsible Access, Smart Liquidity, Secure Identity</h2>
+        <p class="hero-intro">We advocate for regulatory reforms that:</p>
+
+        <div class="policy-points">
+          <div class="policy-point">
+            <div class="policy-icon">•</div>
+            <div class="policy-text"><strong>Expand access</strong> to private markets through professionally managed funds—with safeguards intact</div>
+          </div>
+
+          <div class="policy-point">
+            <div class="policy-icon">•</div>
+            <div class="policy-text"><strong>Improve liquidity</strong> when startups stay private longer, so early investors can fuel the next generation of innovation</div>
+          </div>
+
+          <div class="policy-point">
+            <div class="policy-icon">•</div>
+            <div class="policy-text"><strong>Investor Passports</strong> that allow investors to verify regulatory and compliance status without compromising privacy</div>
+          </div>
+        </div>
+
+        <p class="hero-goal">
+          The goal: Broaden opportunity responsibly by aligning rules with today's markets—protecting investors while unlocking growth.
+        </p>
       </div>
     </section>
 
@@ -47,7 +152,7 @@
         <div style="display: flex; justify-content: center;">
           <article class="card" style="max-width: 600px;">
             <h3>Increasing Retail Investor Access to Private Markets</h3>
-            <p>Unlocking private markets starts here.  The Increasing Investor Opportunities Act (IIOA) opens responsible access to private markets for all Americans through regulated funds – empowering everyday investors, fueling innovation, and creating a more inclusive financial future. Discover how smarter rules can unlock opportunity for everyone.</p>
+            <p>A path to open up high-growth opportunities for everyone.</p>
             <a href="./blog-retail-investor-access.html">View Policy</a>
           </article>
         </div>
@@ -60,7 +165,7 @@
           <!-- Post #1: Expanding 3(c)(1) -->
           <article class="card">
             <h4>Expanding 3(c)(1) for Small Venture Capital Funds</h4>
-            <p>Unlock the next wave of American innovation. The ICAN Act modernizes venture capital rules to empower small funds, expand access for accredited investors, and fuel startups nationwide—all while maintaining strong investor protections. Discover how smarter regulations can supercharge our startup ecosystem.</p>
+            <p>Unlock the next wave of American innovation. The ICAN Act modernizes venture capital rules to empower small funds, expand access for accredited investors, and fuel startups nationwide—all while maintaining strong investor protections.</p>
             <a href="./blog-3c1-exemption.html">Read More</a>
           </article>
 
