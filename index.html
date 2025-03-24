@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" style="filter: invert(0);">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AngelList Policy Center</title>
 
-    <!-- CSS: reference the AngelList blog files -->
-    <link rel="stylesheet" href="f1edb4b3547b1406.css" />
-    <link rel="stylesheet" href="ba48ffd96950df60.css" />
-    <link rel="stylesheet" href="aba9468e9198a466.css" />
-    <link rel="stylesheet" href="e95320ffc54c7cbd.css" />
+    <!-- Updated CSS reference -->
+    <link rel="stylesheet" href="style.css" />
 
     <!-- AngelList Logo -->
     <link rel="icon" href="angellist-logo.png" />
@@ -18,7 +16,7 @@
     <!-- Top Navigation -->
     <header class="site-header">
       <nav class="navbar">
-        <a class="navbar__brand" href="/">
+        <a class="navbar__brand" href="https://www.angellist.com">
           <img
             src="angellist-logo.png"
             alt="AngelList Logo"
@@ -26,175 +24,87 @@
           />
         </a>
         <ul class="navbar__links">
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/jobs">Jobs</a></li>
-          <li><a href="/policy-center" class="active">Policy Center</a></li>
+          <li><a href="https://www.angellist.com/blog">Blog</a></li>
+          <li><a href="https://www.angellist.com/careers">Careers</a></li>
+          <li><a href="index.html" class="active">Policy Center</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section
-      class="hero-section"
-      style="
-        padding: 4rem 1rem;
-        text-align: center;
-        background-color: #f3f4f2;
-      "
-    >
-      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">
-        AngelList Policy Desk
-      </h1>
-      <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-        Explore our core policies, guidelines, and compliance resources.
-      </p>
+    <section class="hero-section">
+      <div class="container">
+        <h1>AngelList Policy Center</h1>
+        <p>Shaping the future of private markets through policy engagement on forward-thinking regulatory frameworks.</p>
+      </div>
     </section>
 
     <!-- Main Content -->
-    <main class="site-content" style="padding: 2rem 1rem;">
+    <main class="container">
       <!-- Featured Policy (Single) -->
-      <section style="margin-bottom: 3rem;">
-        <h2 style="text-align: center; margin-bottom: 2rem;">
-          Featured Policy
-        </h2>
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            max-width: 960px;
-            margin: 0 auto;
-          "
-        >
-          <article
-            style="
-              background: #fff;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #ebeceb;
-              width: 100%;
-              max-width: 600px;
-            "
-          >
+      <section class="mb-lg">
+        <h2 class="text-center mb-md">Featured Policy</h2>
+        <div style="display: flex; justify-content: center;">
+          <article class="card" style="max-width: 600px;">
             <h3>Increasing Retail Investor Access to Private Markets</h3>
-            <p style="color: #333;">
-              A path to open up high-growth opportunities for everyone.
-            </p>
-            <a href="./blog-retail-investor-access.html" style="color: #5955ff;"
-              >View Policy</a
-            >
+            <p>A path to open up high-growth opportunities for everyone.</p>
+            <a href="./blog-retail-investor-access.html">View Policy</a>
           </article>
         </div>
       </section>
 
-      <!-- Other Topics (Now 4 posts) -->
-      <section style="margin-bottom: 3rem;">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Other Topics</h2>
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            max-width: 960px;
-            margin: 0 auto;
-          "
-        >
+      <!-- Other Topics -->
+      <section class="mb-lg">
+        <h2 class="text-center mb-md">Other Topics</h2>
+        <div class="card-grid">
           <!-- Post #1: Expanding 3(c)(1) -->
-          <article
-            style="
-              background: #fff;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #ebeceb;
-            "
-          >
+          <article class="card">
             <h4>Expanding 3(c)(1) for Small Venture Capital Funds</h4>
-            <p style="color: #333;">
-              Why It Matters for new fund managers in 2025.
-            </p>
-            <a href="./blog-3c1-exemption.html" style="color: #5955ff;"
-              >Read More</a
-            >
+            <p>Why It Matters for new fund managers in 2025.</p>
+            <a href="./blog-3c1-exemption.html">Read More</a>
           </article>
 
           <!-- Post #2: Maintaining QSBS & Reg. D -->
-          <article
-            style="
-              background: #fff;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #ebeceb;
-            "
-          >
+          <article class="card">
             <h4>Maintaining the Status Quo on QSBS &amp; Reg. D</h4>
-            <p style="color: #333;">
-              Why stable incentives and accreditation standards matter.
-            </p>
-            <a href="./blog-qsbs-regd-status.html" style="color: #5955ff;"
-              >Read More</a
-            >
+            <p>Why stable incentives and accreditation standards matter.</p>
+            <a href="./blog-qsbs-regd-status.html">Read More</a>
           </article>
 
           <!-- Post #3: Enabling Blockchain Identity -->
-          <article
-            style="
-              background: #fff;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #ebeceb;
-            "
-          >
+          <article class="card">
             <h4>Enabling Blockchain-Based Identity Passports</h4>
-            <p style="color: #333;">
-              Essential regulatory tweaks for a more secure future.
-            </p>
-            <a href="./blog-blockchain-identity.html" style="color: #5955ff;"
-              >Read More</a
-            >
+            <p>Essential regulatory tweaks for a more secure future.</p>
+            <a href="./blog-blockchain-identity.html">Read More</a>
           </article>
 
           <!-- Post #4: Stage-Appropriate Liquidity -->
-          <article
-            style="
-              background: #fff;
-              padding: 1.5rem;
-              border-radius: 8px;
-              border: 1px solid #ebeceb;
-            "
-          >
+          <article class="card">
             <h4>Stage-Appropriate Liquidity for Accredited Investors</h4>
-            <p style="color: #333;">
-              Aligning the time-to-exit with flexible secondary options.
-            </p>
-            <a href="./blog-stage-appropriate-liquidity.html" style="color: #5955ff;"
-              >Read More</a
-            >
+            <p>Aligning the time-to-exit with flexible secondary options.</p>
+            <a href="./blog-stage-appropriate-liquidity.html">Read More</a>
           </article>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer" style="padding: 2rem 1rem; background: #002b31;">
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 1rem;
-        "
-      >
-        <img
-          src="angellist-logo.png"
-          alt="AngelList Logo"
-          style="height: 24px; width: auto; margin-right: 0.5rem;"
-        />
-        <span style="color: #fff;">© 2023 AngelList</span>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img
+            src="angellist-logo.png"
+            alt="AngelList Logo"
+            style="height: 24px; width: auto; margin-right: 0.5rem;"
+          />
+          <span>© 2025 AngelList</span>
+        </div>
+        <nav class="footer-links">
+          <a href="/policy-center/privacy">Privacy Policy</a>
+          <a href="/policy-center/terms">Terms of Service</a>
+          <a href="https://www.angellist.com">Home</a>
+        </nav>
       </div>
-      <nav style="display: flex; justify-content: center; gap: 1.5rem;">
-        <a href="/policy-center/privacy" style="color: #fff;">Privacy Policy</a>
-        <a href="/policy-center/terms" style="color: #fff;">Terms of Service</a>
-        <a href="/" style="color: #fff;">Home</a>
-      </nav>
     </footer>
   </body>
 </html>

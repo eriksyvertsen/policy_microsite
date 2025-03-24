@@ -1,4 +1,268 @@
-html {
-  height: 100%;
-  width: 100%;
+/* 
+  AngelList Policy Microsite - Updated Styling
+  Aligned with AngelList's current design system (2025)
+*/
+
+:root {
+  /* Color Variables */
+  --color-primary: #5955ff;      /* AngelList primary blue */
+  --color-text-primary: #333333; /* Primary text color */
+  --color-text-secondary: #666666; /* Secondary/subtitle text */
+  --color-bg-light: #ffffff;     /* Main background */
+  --color-bg-accent: #f3f4f2;    /* Light gray accent background */
+  --color-footer: #002b31;       /* Footer color */
+  --color-border: #ebeceb;       /* Light border color */
+
+  /* Spacing Variables */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-light);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Layout Components */
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm) 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: var(--space-md);
+}
+
+.navbar__links a {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.navbar__links a.active {
+  color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--color-bg-accent);
+  padding: var(--space-lg) var(--space-sm);
+  text-align: center;
+}
+
+.hero-section h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.hero-section p {
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Content Area */
+.site-content {
+  max-width: 800px;
+  margin: var(--space-md) auto;
+  padding: 0 var(--space-sm);
+}
+
+/* Cards */
+.card {
+  background: var(--color-bg-light);
+  padding: var(--space-md);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  margin-bottom: var(--space-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h3, .card h4 {
+  margin-bottom: var(--space-xs);
+}
+
+.card p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-md);
+}
+
+li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-footer);
+  padding: var(--space-md) var(--space-sm);
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.footer-links a {
+  color: white;
+}
+
+/* Post Meta */
+.post-meta {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+.mb-md {
+  margin-bottom: var(--space-md);
+}
+
+.mb-sm {
+  margin-bottom: var(--space-sm);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode (Optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: #f0f0f0;
+    --color-text-secondary: #cccccc;
+    --color-bg-light: #1a1a1a;
+    --color-bg-accent: #2a2a2a;
+    --color-border: #444444;
+  }
 }
