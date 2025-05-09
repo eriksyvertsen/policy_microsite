@@ -8,3 +8,15 @@ channel = "stable-23_11"
 [deployment]
 publicDir = "./"
 deploymentTarget = "static"
+
+[workflows]
+runButton = "Web Server"
+
+[[workflows.workflow]]
+name = "Web Server"
+author = 21079383
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python server.py"
