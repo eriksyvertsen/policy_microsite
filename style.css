@@ -152,7 +152,10 @@ strong {
 /* Policy Hero Styles */
 .policy-hero {
   padding: var(--space-xl) var(--space-md);
-  background-color: var(--color-bg-accent);
+  background-image: url('attached_assets/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin-bottom: var(--space-lg);
 }
 
