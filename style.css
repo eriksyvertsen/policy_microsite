@@ -1,127 +1,351 @@
-/* AngelList Blog Styling 2024 */
+/* 
+ AngelList Policy Microsite - Updated Styling
+ Aligned with AngelList's current design system (2025)
+*/
+
 :root {
-  --color-primary: #007AFF;
-  --color-text-primary: #000000;
-  --color-text-secondary: #666666;
-  --color-bg-light: #ffffff;
-  --color-bg-accent: #f8f9fa;
-  --color-border: #eaeaea;
-  --font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Updated Color Variables */
+  --color-primary: #000000;      /* Black for primary elements */
+  --color-text-primary: #141414; /* Dark text */
+  --color-text-secondary: #666666; /* Secondary text */
+  --color-bg-light: #ffffff;     /* White background */
+  --color-bg-accent: #f7f7f7;    /* Light gray accent */
+  --color-footer: #000000;       /* Black footer */
+  --color-border: #e5e5e5;       /* Light border */
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
 }
 
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
-  font-family: var(--font-family);
-  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
   color: var(--color-text-primary);
-  background: var(--color-bg-light);
+  background-color: var(--color-bg-light);
   -webkit-font-smoothing: antialiased;
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Navigation */
 .site-header {
-  padding: 1.5rem 0;
-  background: var(--color-bg-light);
   border-bottom: 1px solid var(--color-border);
+  padding: 1.25rem 0;
+  background-color: var(--color-bg-light);
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-sm);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar__brand img {
-  height: 24px;
+.navbar__brand {
+  display: flex;
+  align-items: center;
 }
 
 .navbar__links {
   display: flex;
-  gap: 2rem;
+  gap: var(--space-md);
   list-style: none;
 }
 
 .navbar__links a {
   color: var(--color-text-primary);
-  text-decoration: none;
-  font-size: 0.9375rem;
   font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
+.navbar__links a.active {
+  color: var(--color-primary);
+}
+
+/* Hero Section */
 .hero-section {
-  padding: 6rem 0 4rem;
-  background: var(--color-bg-light);
-  text-align: center;
+  padding: var(--space-xl) var(--space-sm);
+  background-color: var(--color-bg-light);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
 }
 
 .hero-section h1 {
-  font-size: 3.5rem;
+  margin-bottom: var(--space-xs);
+}
+
+.hero-section p {
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Policy Hero Styles */
+.policy-hero {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-bg-accent);
+  margin-bottom: var(--space-lg);
+}
+
+.policy-hero__container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.policy-hero__title {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+}
+
+.policy-hero__subtitle {
+  color: var(--color-primary);
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  line-height: 1.3;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.post-meta {
+.policy-hero__intro {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
   color: var(--color-text-secondary);
-  font-size: 1rem;
 }
 
-.site-content {
+.policy-points {
+  background-color: var(--color-bg-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0;
+  text-align: left;
   max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
 }
 
-.site-content p {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  color: var(--color-text-primary);
+.policy-points:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.site-content h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 3rem 0 1.5rem;
-  letter-spacing: -0.01em;
+.policy-point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
 }
 
-.site-content ul, 
-.site-content ol {
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
+.policy-point:last-child {
+  margin-bottom: 0;
 }
 
-.site-content li {
-  font-size: 1.125rem;
-  margin-bottom: 0.75rem;
+.policy-point__icon {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.policy-point__text {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.policy-point__text strong {
+  color: var(--color-primary);
+}
+
+.policy-hero__goal {
+  font-style: italic;
+  max-width: 700px;
+  margin: var(--space-md) auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* Content Area */
+.site-content {
+  max-width: 1200px;
+  margin: 0 auto var(--space-xl);
+  padding: 0 var(--space-sm);
+}
+
+/* Featured Policy */
+.featured-policy {
+  margin-bottom: var(--space-xl);
+}
+
+.featured-policy__container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+/* Policy Topics */
+.policy-topics {
+  margin-bottom: var(--space-xl);
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* Cards */
+.policy-card {
+  background: var(--color-bg-light);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.policy-card h3, 
+.policy-card h4 {
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary);
+}
+
+.policy-card p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.policy-card__link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.policy-card__link:hover {
+  background-color: #333333;
+}
+
+.policy-card--featured {
+  max-width: 600px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-  background: var(--color-bg-accent);
-  padding: 2rem;
-  border-radius: 12px;
-  margin: 2rem 0;
+  background: var(--color-bg-light);
+  padding: var(--space-md);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  margin-bottom: var(--space-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3, .card h4 {
+  margin-bottom: var(--space-xs);
+}
+
+.card p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+/* Footer */
 .site-footer {
-  background: var(--color-bg-light);
-  padding: 4rem 2rem;
-  border-top: 1px solid var(--color-border);
+  background-color: var(--color-footer);
+  padding: var(--space-lg) var(--space-sm);
+  color: white;
+  margin-top: var(--space-xl);
 }
 
 .footer-container {
@@ -130,42 +354,93 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--color-text-primary);
+  flex-direction: column;
 }
 
 .footer-links {
   display: flex;
-  gap: 2rem;
+  gap: var(--space-md);
 }
 
 .footer-links a {
-  color: var(--color-text-secondary);
+  color: white;
   text-decoration: none;
-  font-size: 0.9375rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* Post Meta */
+.post-meta {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+.mb-md {
+  margin-bottom: var(--space-md);
+}
+
+.mb-sm {
+  margin-bottom: var(--space-sm);
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .hero-section h1 {
+  h1 {
     font-size: 2.5rem;
   }
 
-  .site-content {
-    padding: 0 1.5rem 4rem;
+  .policy-hero__title {
+    font-size: 2rem;
   }
 
-  .navbar,
+  .policy-hero__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .policy-points {
+    padding: var(--space-md);
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-container {
-    padding: 0 1.5rem;
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
+  .policy-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .policy-hero__subtitle {
+    font-size: 1.2rem;
+  }
+
   .navbar__links {
     gap: var(--space-sm);
     font-size: 0.9rem;
