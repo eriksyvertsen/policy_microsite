@@ -242,6 +242,85 @@ strong {
   color: var(--color-text-secondary);
 }
 
+/* Team Section */
+.team-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+}
+
+.team-section__title {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
+
+.team-section__description {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.team-member {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+}
+
+.team-member__image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto var(--space-md);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.team-member__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member__name {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary);
+}
+
+.team-member__title {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+.team-section__footer {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+}
+
+.team-section__footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.team-section__footer a:hover {
+  text-decoration: underline;
+}
+
 /* Content Area */
 .site-content {
   max-width: 1200px;
