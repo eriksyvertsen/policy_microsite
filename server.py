@@ -18,7 +18,7 @@ def subscribe():
         # Save to CSV with timestamp
         with open('subscribers.csv', 'a', newline='') as file:
             writer = csv.writer(file)
-            if os.path.getsize('data/subscribers.csv') == 0:
+            if os.path.getsize('subscribers.csv') == 0:
                 writer.writerow(['Email', 'Timestamp'])
             writer.writerow([email, datetime.now()])
             
