@@ -152,9 +152,11 @@ strong {
 /* Policy Hero Styles */
 .policy-hero {
   padding: var(--space-xl) var(--space-md);
-  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  background-image: url('attached_assets/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin-bottom: var(--space-lg);
-  color: #ffffff;
 }
 
 .policy-hero__container {
@@ -167,11 +169,10 @@ strong {
   font-size: 2.5rem;
   margin-bottom: var(--space-md);
   font-weight: 700;
-  color: #ffffff;
 }
 
 .policy-hero__subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
   font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: var(--space-md);
@@ -184,13 +185,13 @@ strong {
 .policy-hero__intro {
   font-size: 1.2rem;
   margin-bottom: var(--space-sm);
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 .policy-points {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-light);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: var(--space-md) var(--space-lg);
   margin: var(--space-md) 0;
   text-align: left;
@@ -202,8 +203,7 @@ strong {
 
 .policy-points:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .policy-point {
@@ -217,7 +217,7 @@ strong {
 }
 
 .policy-point__icon {
-  color: #4845e6;
+  color: var(--color-primary);
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: var(--space-sm);
@@ -227,11 +227,10 @@ strong {
 .policy-point__text {
   font-size: 1.15rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
 }
 
 .policy-point__text strong {
-  color: #4845e6;
+  color: var(--color-primary);
 }
 
 .policy-hero__goal {
@@ -240,7 +239,7 @@ strong {
   margin: var(--space-md) auto;
   font-size: 1.2rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 /* Content Area */
