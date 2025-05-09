@@ -387,7 +387,7 @@ strong {
 }
 
 .featured-hero__link:hover {
-  background-color: #3D424A;
+  background-color: #4845e6;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
