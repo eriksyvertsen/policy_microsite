@@ -5,13 +5,13 @@
 
 :root {
   /* Updated Color Variables */
-  --color-primary: #000000;      /* Black for primary elements */
-  --color-text-primary: #141414; /* Dark text */
-  --color-text-secondary: #666666; /* Secondary text */
-  --color-bg-light: #ffffff;     /* White background */
-  --color-bg-accent: #f7f7f7;    /* Light gray accent */
-  --color-footer: #000000;       /* Black footer */
-  --color-border: #e5e5e5;       /* Light border */
+  --color-primary: #2D3047;      /* Softer dark blue for primary elements */
+  --color-text-primary: #419D78; /* Muted teal for text */
+  --color-text-secondary: #72A1E5; /* Soft blue for secondary text */
+  --color-bg-light: #FAFBFC;     /* Off-white background */
+  --color-bg-accent: #EEF2F7;    /* Cool light gray accent */
+  --color-footer: #2D3047;       /* Matching footer */
+  --color-border: #E8ECF2;       /* Subtle border */
 
   /* Spacing */
   --space-xs: 0.5rem;
