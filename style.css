@@ -4,14 +4,18 @@
 */
 
 :root {
-  /* Color Variables */
-  --color-primary: #5955ff;      /* AngelList primary blue */
-  --color-text-primary: #333333; /* Primary text color */
-  --color-text-secondary: #666666; /* Secondary/subtitle text */
-  --color-bg-light: #ffffff;     /* Main background */
-  --color-bg-accent: #f3f4f2;    /* Light gray accent background */
-  --color-footer: #002b31;       /* Footer color */
-  --color-border: #ebeceb;       /* Light border color */
+  /* Updated AngelList Blog Colors */
+  --color-primary: #000000;      /* Black for primary elements */
+  --color-text-primary: #141414; /* Dark text */
+  --color-text-secondary: #666666; /* Secondary text */
+  --color-bg-light: #ffffff;     /* White background */
+  --color-bg-accent: #f7f7f7;    /* Light gray accent */
+  --color-footer: #000000;       /* Black footer */
+  --color-border: #e5e5e5;       /* Light border */
+
+  /* Font Settings */
+  --font-family: AngelList, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-family-display: "AngelList Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* Spacing Variables */
   --space-xs: 0.5rem;
@@ -29,10 +33,12 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-family);
+  line-height: 1.5;
   color: var(--color-text-primary);
   background-color: var(--color-bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
@@ -43,14 +49,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-family: var(--font-family-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-family: var(--font-family-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
-  text-align: center;
+  font-weight: 600;
 }
 
 h3 {
