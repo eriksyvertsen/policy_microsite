@@ -1,19 +1,19 @@
 /* 
-  AngelList Policy Microsite - Updated Styling
-  Aligned with AngelList's current design system (2025)
+ AngelList Policy Microsite - Updated Styling
+ Aligned with AngelList's current design system (2025)
 */
 
 :root {
-  /* Color Variables */
-  --color-primary: #5955ff;      /* AngelList primary blue */
-  --color-text-primary: #333333; /* Primary text color */
-  --color-text-secondary: #666666; /* Secondary/subtitle text */
-  --color-bg-light: #ffffff;     /* Main background */
-  --color-bg-accent: #f3f4f2;    /* Light gray accent background */
-  --color-footer: #002b31;       /* Footer color */
-  --color-border: #ebeceb;       /* Light border color */
+  /* Updated Color Variables */
+  --color-primary: #000000;      /* Black for primary elements */
+  --color-text-primary: #141414; /* Dark text */
+  --color-text-secondary: #666666; /* Secondary text */
+  --color-bg-light: #ffffff;     /* White background */
+  --color-bg-accent: #f7f7f7;    /* Light gray accent */
+  --color-footer: #000000;       /* Black footer */
+  --color-border: #e5e5e5;       /* Light border */
 
-  /* Spacing Variables */
+  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
@@ -28,11 +28,13 @@
   box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   color: var(--color-text-primary);
   background-color: var(--color-bg-light);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Typography */
@@ -42,15 +44,21 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+/* Typography */
 h1 {
-  font-size: 2.2rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin-top: var(--space-lg);
-  margin-bottom: var(--space-sm);
-  text-align: center;
+  margin-bottom: var(--space-md);
+  text-align: left;
 }
 
 h3 {
@@ -79,10 +87,10 @@ strong {
   font-weight: 600;
 }
 
-/* Layout Components */
+/* Navigation */
 .site-header {
   border-bottom: 1px solid var(--color-border);
-  padding: var(--space-sm) 0;
+  padding: 1.25rem 0;
   background-color: var(--color-bg-light);
   position: sticky;
   top: 0;
@@ -91,12 +99,12 @@ strong {
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar__brand {
@@ -106,13 +114,15 @@ strong {
 
 .navbar__links {
   display: flex;
-  list-style: none;
   gap: var(--space-md);
+  list-style: none;
 }
 
 .navbar__links a {
-  font-weight: 500;
   color: var(--color-text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .navbar__links a.active {
@@ -121,9 +131,10 @@ strong {
 
 /* Hero Section */
 .hero-section {
-  background-color: var(--color-bg-accent);
-  padding: var(--space-lg) var(--space-sm);
-  text-align: center;
+  padding: var(--space-xl) var(--space-sm);
+  background-color: var(--color-bg-light);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
 }
 
 .hero-section h1 {
@@ -256,21 +267,21 @@ strong {
   margin-top: var(--space-md);
 }
 
-/* Policy Cards */
+/* Cards */
 .policy-card {
   background: var(--color-bg-light);
   padding: var(--space-md);
-  border-radius: 8px;
   border: 1px solid var(--color-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .policy-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .policy-card h3, 
@@ -287,19 +298,18 @@ strong {
 
 .policy-card__link {
   display: inline-block;
-  padding: var(--space-xs) var(--space-sm);
+  padding: 0.75rem 1.5rem;
   background-color: var(--color-primary);
   color: white;
-  border-radius: 4px;
+  border-radius: 8px;
   font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
   align-self: flex-start;
-  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .policy-card__link:hover {
-  background-color: #4845e6;
-  transform: translateY(-2px);
-  opacity: 1;
+  background-color: #333333;
 }
 
 .policy-card--featured {
@@ -307,7 +317,6 @@ strong {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Cards */
 .card {
   background: var(--color-bg-light);
   padding: var(--space-md);
@@ -334,32 +343,34 @@ strong {
 /* Footer */
 .site-footer {
   background-color: var(--color-footer);
-  padding: var(--space-md) var(--space-sm);
+  padding: var(--space-lg) var(--space-sm);
   color: white;
+  margin-top: var(--space-xl);
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.footer-brand {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--space-sm);
+  flex-direction: column;
 }
 
 .footer-links {
   display: flex;
-  justify-content: center;
   gap: var(--space-md);
 }
 
 .footer-links a {
   color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
 }
 
 /* Post Meta */
@@ -392,8 +403,12 @@ strong {
   margin-bottom: var(--space-sm);
 }
 
-/* Responsive Adjustments */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
   .policy-hero__title {
     font-size: 2rem;
   }
@@ -408,6 +423,12 @@ strong {
 
   .policy-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
   }
 }
 
