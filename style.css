@@ -398,10 +398,38 @@ strong {
 }
 
 .policy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
   gap: var(--space-md);
   margin-top: var(--space-md);
+  overflow-x: auto;
+  padding-bottom: var(--space-md);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.policy-card {
+  min-width: 280px;
+  max-width: 280px;
+  flex: 0 0 auto;
+}
+
+/* Custom scrollbar styling */
+.policy-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.policy-grid::-webkit-scrollbar-track {
+  background: var(--color-bg-accent);
+  border-radius: 4px;
+}
+
+.policy-grid::-webkit-scrollbar-thumb {
+  background: var(--color-text-secondary);
+  border-radius: 4px;
+}
+
+.policy-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }
 
 /* Policy Cards */
